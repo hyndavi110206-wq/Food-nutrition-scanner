@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Nutrition Scanner</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>Food Nutrition Scanner</h1>
+      <p>Upload food image to analyze nutrition</p>
+    </header>
+
+    <section class="upload-card">
+      <input type="file" id="foodImage" accept="image/*">
+      <button onclick="analyzeFood()">Analyze Food</button>
+      <div id="preview"></div>
+    </section>
+
+    <section id="result" class="result-card hidden">
+      <h2>Nutrition Details</h2>
+
+      <div class="nutrition-grid">
+        <div class="nutrition-box">
+          <span>Calories</span>
+          <h3 id="calories"></h3>
+        </div>
+        <div class="nutrition-box">
+          <span>Sugar</span>
+          <h3 id="sugar"></h3>
+        </div>
+        <div class="nutrition-box">
+          <span>Fat</span>
+          <h3 id="fat"></h3>
+        </div>
+        <div class="nutrition-box">
+          <span>Vitamins</span>
+          <h3 id="vitamins"></h3>
+        </div>
+      </div>
+
+      <div id="healthStatus"></div>
+      <div id="alternate"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
